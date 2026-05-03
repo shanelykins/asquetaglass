@@ -5,8 +5,8 @@ backend:
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
-site_url: https://asquetaglass.netlify.app
-display_url: https://asquetaglass.netlify.app
+site_url: https://elaborate-dusk-fec97a.netlify.app
+display_url: https://elaborate-dusk-fec97a.netlify.app
 
 collections:
   - name: "settings"
