@@ -125,6 +125,69 @@
             width: 100%;
         }
 
+        /* Services Dropdown */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown-trigger {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            cursor: pointer;
+        }
+
+        .nav-dropdown-trigger svg {
+            transition: transform 0.2s;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-trigger svg {
+            transform: rotate(180deg);
+        }
+
+        .nav-dropdown-trigger::after {
+            display: none;
+        }
+
+        .nav-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 1rem;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+            min-width: 220px;
+            padding: 0.5rem 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            margin-top: 0.5rem;
+        }
+
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+            transition: all 0.2s;
+        }
+
+        .nav-dropdown-menu a:hover {
+            background: var(--light-gray);
+            color: var(--blue);
+        }
+
+        .nav-dropdown-menu a::after {
+            display: none;
+        }
+
         .header-cta {
             background: var(--blue);
             color: white;
@@ -1769,7 +1832,16 @@
                 <img src="https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/03d2b8ee-e8cf-40c2-9823-5cbb5d378e97/ChatGPT+Image+Feb+26%2C+2026%2C+10_16_29+AM.png" alt="Asqueta Glass">
             </a>
             <nav>
-                <a href="#services">Services</a>
+                <div class="nav-dropdown">
+                    <a href="#services" class="nav-dropdown-trigger">Services <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+                    <div class="nav-dropdown-menu">
+                        <a href="/services/shower-enclosures.html">Custom Shower Glass</a>
+                        <a href="/services/commercial-glass.html">Storefront</a>
+                        <a href="/services/window-repair.html">Window Repair & Service</a>
+                        <a href="/services/window-replacement.html">Window Replacement</a>
+                        <a href="/services/additional-services.html">Additional Services</a>
+                    </div>
+                </div>
                 <a href="#projects">Projects</a>
                 <a href="#about">About</a>
                 <a href="#team">Our Team</a>

@@ -84,6 +84,14 @@
         .lightbox-prev { left: 1.5rem; }
         .lightbox-next { right: 1.5rem; }
 
+        .content-section { padding: 5rem 2rem; background: var(--white); }
+        .content-container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .content-container h2 { font-family: var(--font-display); font-size: 2rem; color: var(--black); margin-bottom: 1.5rem; }
+        .content-container p { font-size: 1.1rem; color: var(--dark-gray); line-height: 1.8; margin-bottom: 1rem; }
+        .service-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2.5rem; text-align: left; list-style: none; }
+        .service-list li { background: var(--off-white); padding: 1rem 1.25rem; border-radius: 8px; font-weight: 500; display: flex; align-items: center; gap: 0.75rem; }
+        .service-list li::before { content: '✓'; color: var(--accent); font-weight: bold; font-size: 1.1rem; }
+
         @media (max-width: 768px) {
             .header-inner { padding: 0.875rem 1rem; }
             .logo img { height: 50px; }
@@ -176,6 +184,24 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <h2>Transform Your Home with New Windows</h2>
+            <p>Whether you're building new or upgrading old windows, Asqueta Glass provides expert installation with quality materials. We work with all major window brands and can help you choose the right solution for your home and budget.</p>
+            <p>Our window replacement services include proper measurement, removal of old windows, installation, and cleanup. We ensure a perfect fit and seal for maximum energy efficiency.</p>
+
+            <ul class="service-list">
+                <li>New Construction Windows</li>
+                <li>Replacement Windows</li>
+                <li>Double-Pane Upgrades</li>
+                <li>Energy-Efficient Glass</li>
+                <li>Custom Sizes & Shapes</li>
+                <li>Arch Top Windows</li>
+            </ul>
         </div>
     </section>
 
