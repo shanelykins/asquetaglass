@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Storefronts | Asqueta Glass | Nampa, Boise, Meridian</title>
+    <meta name="description" content="Professional commercial glass storefronts, installations, and repairs for Treasure Valley businesses since 1965.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --white: #ffffff; --off-white: #f9fafb; --light-gray: #f3f4f6; --mid-gray: #9ca3af;
+            --dark-gray: #374151; --charcoal: #1f2937; --black: #111827; --blue: #0369a1;
+            --blue-light: #e0f2fe; --blue-dark: #0c4a6e; --accent: #0ea5e9;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, sans-serif;
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+        }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+        body { font-family: var(--font-body); color: var(--charcoal); line-height: 1.6; background: var(--white); }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        header.scrolled { box-shadow: var(--shadow-md); }
+        .header-inner { max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+        .logo img { height: 70px; width: auto; }
+        nav { display: flex; align-items: center; gap: 2.5rem; }
+        nav a { font-size: 0.9rem; font-weight: 500; color: var(--dark-gray); transition: color 0.2s; }
+        nav a:hover { color: var(--blue); }
+        .header-cta { background: var(--blue); color: white; padding: 0.75rem 1.75rem; border-radius: 6px; font-weight: 600; font-size: 0.9rem; transition: all 0.2s; }
+        .header-cta:hover { background: var(--blue-dark); }
+        .header-social { display: flex; align-items: center; gap: 0.75rem; }
+        .header-social a { color: var(--dark-gray); transition: color 0.2s; display: flex; }
+        .header-social a:hover { color: var(--blue); }
+        .mobile-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+        .mobile-toggle span { width: 24px; height: 2px; background: var(--charcoal); }
+
+        .page-hero { padding: 10rem 2rem 4rem; background: var(--charcoal); color: var(--white); text-align: center; }
+        .page-hero h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 500; margin-bottom: 1rem; }
+        .page-hero p { font-size: 1.125rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; }
+        .breadcrumb { margin-bottom: 1.5rem; font-size: 0.9rem; }
+        .breadcrumb a { color: var(--accent); }
+        .breadcrumb span { color: rgba(255,255,255,0.5); margin: 0 0.5rem; }
+
+        .gallery-section { padding: 5rem 2rem; background: var(--off-white); }
+        .gallery-container { max-width: 1400px; margin: 0 auto; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.5rem; }
+        .gallery-item { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; cursor: pointer; box-shadow: var(--shadow-md); transition: all 0.3s ease; }
+        .gallery-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-xl); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-item-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%); display: flex; align-items: flex-end; padding: 1.5rem; opacity: 0; transition: opacity 0.3s; }
+        .gallery-item:hover .gallery-item-overlay { opacity: 1; }
+        .gallery-item-overlay h3 { color: var(--white); font-family: var(--font-display); font-size: 1.25rem; font-weight: 500; }
+        .gallery-item-overlay p { color: rgba(255,255,255,0.8); font-size: 0.875rem; margin-top: 0.25rem; }
+
+        .cta-section { padding: 5rem 2rem; background: var(--blue); color: var(--white); text-align: center; }
+        .cta-section h2 { font-family: var(--font-display); font-size: 2.5rem; font-weight: 500; margin-bottom: 1rem; }
+        .cta-section p { font-size: 1.125rem; opacity: 0.9; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; border-radius: 6px; font-weight: 600; font-size: 1rem; transition: all 0.2s; cursor: pointer; border: none; }
+        .btn-white { background: var(--white); color: var(--blue); }
+        .btn-white:hover { background: var(--off-white); transform: translateY(-2px); }
+        .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.5); }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
+
+        footer { background: var(--black); color: var(--white); padding: 3rem 2rem; text-align: center; }
+        footer p { color: rgba(255,255,255,0.5); font-size: 0.875rem; }
+        footer a { color: var(--accent); }
+
+        .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 9999; display: none; align-items: center; justify-content: center; padding: 2rem; }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 8px; }
+        .lightbox-close { position: absolute; top: 1.5rem; right: 1.5rem; width: 48px; height: 48px; background: rgba(255,255,255,0.1); border: none; border-radius: 50%; color: white; font-size: 1.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .lightbox-close:hover { background: rgba(255,255,255,0.2); }
+        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; background: rgba(255,255,255,0.1); border: none; border-radius: 50%; color: white; font-size: 1.25rem; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .lightbox-nav:hover { background: rgba(255,255,255,0.2); }
+        .lightbox-prev { left: 1.5rem; }
+        .lightbox-next { right: 1.5rem; }
+
+        @media (max-width: 768px) {
+            .header-inner { padding: 0.875rem 1rem; }
+            .logo img { height: 50px; }
+            nav, .header-cta, .header-social { display: none; }
+            .mobile-toggle { display: flex; }
+            .page-hero { padding: 7rem 1.25rem 3rem; }
+            .page-hero h1 { font-size: 2rem; }
+            .gallery-section { padding: 3rem 1.25rem; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .cta-section { padding: 3rem 1.25rem; }
+            .cta-section h2 { font-size: 1.75rem; }
+            .cta-buttons { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+            .lightbox-nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <img src="https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/03d2b8ee-e8cf-40c2-9823-5cbb5d378e97/ChatGPT+Image+Feb+26%2C+2026%2C+10_16_29+AM.png" alt="Asqueta Glass">
+            </a>
+            <nav>
+                <a href="/#services">Services</a>
+                <a href="/#projects">Projects</a>
+                <a href="/#about">About</a>
+                <a href="/#team">Our Team</a>
+                <a href="/#contact">Contact</a>
+            </nav>
+            <div class="header-social">
+                <a href="https://www.instagram.com/asquetaglass/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://www.facebook.com/people/Asqueta-Glass/61580762390418/" target="_blank" rel="noopener" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+            </div>
+            <a href="/#contact" class="header-cta">Get Free Quote</a>
+            <div class="mobile-toggle" onclick="window.location.href='/'">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            Services
+            <span>/</span>
+            Commercial Glass
+        </div>
+        <h1>Commercial Storefronts</h1>
+        <p>Professional storefront installation, repairs, and tenant improvements for Treasure Valley businesses.</p>
+    </section>
+
+    <section class="gallery-section">
+        <div class="gallery-container">
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox(0)">
+                    <img src="https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/d9a12d9c-cac5-478c-8479-92015e7dd36b/storefront.png" alt="Full Height Storefront" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div>
+                            <h3>Full Height Storefront</h3>
+                            <p>Commercial installation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(1)">
+                    <img src="https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/444a90a7-a952-4d83-9605-2b2493951bbb/clear+anodized+storefront" alt="Clear Anodized Storefront" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div>
+                            <h3>Clear Anodized Storefront</h3>
+                            <p>Full-height door</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(2)">
+                    <img src="https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/68ba6e11-e264-4282-8796-00ed91732aec/rake+top+storefront" alt="Rake Top Storefront" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div>
+                            <h3>Rake Top Storefront</h3>
+                            <p>Sunroom application</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(3)">
+                    <img src="https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/a6ec2d83-1b9a-4ab4-b4ad-7b96c5806ce8/custom+storefront+repairs" alt="Custom Storefront Repairs" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div>
+                            <h3>Custom Storefront Repairs</h3>
+                            <p>Commercial service</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(4)">
+                    <img src="https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/038f398d-a4db-42e6-b09f-732c6fb81fbd/storefront+with+door" alt="Storefront with Door" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div>
+                            <h3>Storefront with Door</h3>
+                            <p>Business entrance</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(5)">
+                    <img src="https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/595f9d6d-c40b-4f9e-81c5-6be3253736f7/sun+room" alt="Custom Sun Room" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div>
+                            <h3>Custom Sun Room</h3>
+                            <p>Residential commercial</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(6)">
+                    <img src="https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/271806e0-b129-4ce8-9f4b-c141eaf2ea62/storefront+with+doors" alt="Storefront with Pair of Doors" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <div>
+                            <h3>Storefront with Pair of Doors</h3>
+                            <p>Double entry</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Need Commercial Glass Work?</h2>
+        <p>From new storefronts to repairs and tenant improvements, we serve businesses throughout the Treasure Valley.</p>
+        <div class="cta-buttons">
+            <a href="/#contact" class="btn btn-white">Get Free Estimate</a>
+            <a href="tel:208-466-2476" class="btn btn-outline">Call 208-466-2476</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Asqueta Glass by Lopo & Associates. <a href="/">Back to Home</a></p>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-nav lightbox-prev" onclick="prevImage()">&#8249;</button>
+        <button class="lightbox-nav lightbox-next" onclick="nextImage()">&#8250;</button>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 50); });
+
+        const images = [
+            'https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/d9a12d9c-cac5-478c-8479-92015e7dd36b/storefront.png',
+            'https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/444a90a7-a952-4d83-9605-2b2493951bbb/clear+anodized+storefront',
+            'https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/68ba6e11-e264-4282-8796-00ed91732aec/rake+top+storefront',
+            'https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/a6ec2d83-1b9a-4ab4-b4ad-7b96c5806ce8/custom+storefront+repairs',
+            'https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/038f398d-a4db-42e6-b09f-732c6fb81fbd/storefront+with+door',
+            'https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/595f9d6d-c40b-4f9e-81c5-6be3253736f7/sun+room',
+            'https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/271806e0-b129-4ce8-9f4b-c141eaf2ea62/storefront+with+doors'
+        ];
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            currentIndex = index;
+            document.getElementById('lightbox-img').src = images[index];
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.getElementById('lightbox-img').src = images[currentIndex];
+        }
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            document.getElementById('lightbox-img').src = images[currentIndex];
+        }
+        document.addEventListener('keydown', (e) => {
+            if (!document.getElementById('lightbox').classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('lightbox')) closeLightbox();
+        });
+    </script>
+</body>
+</html>

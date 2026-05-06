@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Replacement | Asqueta Glass | Nampa, Boise, Meridian</title>
+    <meta name="description" content="Professional window replacement services throughout the Treasure Valley. New construction and replacement windows since 1965.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --white: #ffffff; --off-white: #f9fafb; --light-gray: #f3f4f6; --mid-gray: #9ca3af;
+            --dark-gray: #374151; --charcoal: #1f2937; --black: #111827; --blue: #0369a1;
+            --blue-light: #e0f2fe; --blue-dark: #0c4a6e; --accent: #0ea5e9;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, sans-serif;
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+        }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+        body { font-family: var(--font-body); color: var(--charcoal); line-height: 1.6; background: var(--white); }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        header.scrolled { box-shadow: var(--shadow-md); }
+        .header-inner { max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+        .logo img { height: 70px; width: auto; }
+        nav { display: flex; align-items: center; gap: 2.5rem; }
+        nav a { font-size: 0.9rem; font-weight: 500; color: var(--dark-gray); transition: color 0.2s; }
+        nav a:hover { color: var(--blue); }
+        .header-cta { background: var(--blue); color: white; padding: 0.75rem 1.75rem; border-radius: 6px; font-weight: 600; font-size: 0.9rem; }
+        .header-social { display: flex; align-items: center; gap: 0.75rem; }
+        .header-social a { color: var(--dark-gray); display: flex; }
+        .mobile-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+        .mobile-toggle span { width: 24px; height: 2px; background: var(--charcoal); }
+
+        .page-hero { padding: 10rem 2rem 4rem; background: var(--charcoal); color: var(--white); text-align: center; }
+        .page-hero h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 500; margin-bottom: 1rem; }
+        .page-hero p { font-size: 1.125rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; }
+        .breadcrumb { margin-bottom: 1.5rem; font-size: 0.9rem; }
+        .breadcrumb a { color: var(--accent); }
+        .breadcrumb span { color: rgba(255,255,255,0.5); margin: 0 0.5rem; }
+
+        .content-section { padding: 5rem 2rem; background: var(--off-white); }
+        .content-container { max-width: 1000px; margin: 0 auto; }
+        .featured-image { border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-xl); margin-bottom: 3rem; }
+        .featured-image img { width: 100%; height: auto; }
+        .content-text { text-align: center; }
+        .content-text h2 { font-family: var(--font-display); font-size: 2rem; margin-bottom: 1.5rem; color: var(--black); }
+        .content-text p { font-size: 1.125rem; color: var(--dark-gray); margin-bottom: 1rem; line-height: 1.8; }
+        .service-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; text-align: left; }
+        .service-list li { background: var(--white); padding: 1rem 1.25rem; border-radius: 8px; box-shadow: var(--shadow-md); list-style: none; font-weight: 500; display: flex; align-items: center; gap: 0.75rem; }
+        .service-list li::before { content: '✓'; color: var(--accent); font-weight: bold; }
+
+        .cta-section { padding: 5rem 2rem; background: var(--blue); color: var(--white); text-align: center; }
+        .cta-section h2 { font-family: var(--font-display); font-size: 2.5rem; font-weight: 500; margin-bottom: 1rem; }
+        .cta-section p { font-size: 1.125rem; opacity: 0.9; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; border-radius: 6px; font-weight: 600; font-size: 1rem; transition: all 0.2s; }
+        .btn-white { background: var(--white); color: var(--blue); }
+        .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.5); }
+
+        footer { background: var(--black); color: var(--white); padding: 3rem 2rem; text-align: center; }
+        footer p { color: rgba(255,255,255,0.5); font-size: 0.875rem; }
+        footer a { color: var(--accent); }
+
+        @media (max-width: 768px) {
+            .header-inner { padding: 0.875rem 1rem; }
+            .logo img { height: 50px; }
+            nav, .header-cta, .header-social { display: none; }
+            .mobile-toggle { display: flex; }
+            .page-hero { padding: 7rem 1.25rem 3rem; }
+            .page-hero h1 { font-size: 2rem; }
+            .content-section { padding: 3rem 1.25rem; }
+            .content-text h2 { font-size: 1.5rem; }
+            .cta-section { padding: 3rem 1.25rem; }
+            .cta-section h2 { font-size: 1.75rem; }
+            .cta-buttons { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <img src="https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/03d2b8ee-e8cf-40c2-9823-5cbb5d378e97/ChatGPT+Image+Feb+26%2C+2026%2C+10_16_29+AM.png" alt="Asqueta Glass">
+            </a>
+            <nav>
+                <a href="/#services">Services</a>
+                <a href="/#projects">Projects</a>
+                <a href="/#about">About</a>
+                <a href="/#team">Our Team</a>
+                <a href="/#contact">Contact</a>
+            </nav>
+            <div class="header-social">
+                <a href="https://www.instagram.com/asquetaglass/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://www.facebook.com/people/Asqueta-Glass/61580762390418/" target="_blank" rel="noopener" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+            </div>
+            <a href="/#contact" class="header-cta">Get Free Quote</a>
+            <div class="mobile-toggle" onclick="window.location.href='/'">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            Services
+            <span>/</span>
+            Window Replacement
+        </div>
+        <h1>Window Replacement</h1>
+        <p>New construction and replacement windows for homes throughout the Treasure Valley. Energy-efficient upgrades available.</p>
+    </section>
+
+    <section class="content-section">
+        <div class="content-container">
+            <div class="featured-image">
+                <img src="https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/5734ac1a-4066-4a27-8349-e2d2c5aad886/Before+after+window+replacement.jpg" alt="Before and After Window Replacement">
+            </div>
+            <div class="content-text">
+                <h2>Transform Your Home with New Windows</h2>
+                <p>Whether you're building new or upgrading old windows, Asqueta Glass provides expert installation with quality materials. We work with all major window brands and can help you choose the right solution for your home and budget.</p>
+                <p>Our window replacement services include proper measurement, removal of old windows, installation, and cleanup. We ensure a perfect fit and seal for maximum energy efficiency.</p>
+
+                <ul class="service-list">
+                    <li>New Construction Windows</li>
+                    <li>Replacement Windows</li>
+                    <li>Double-Pane Upgrades</li>
+                    <li>Energy-Efficient Glass</li>
+                    <li>Custom Sizes & Shapes</li>
+                    <li>Arch Top Windows</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready for New Windows?</h2>
+        <p>Get a free estimate on window replacement. We'll help you find the right windows for your home and budget.</p>
+        <div class="cta-buttons">
+            <a href="/#contact" class="btn btn-white">Get Free Estimate</a>
+            <a href="tel:208-466-2476" class="btn btn-outline">Call 208-466-2476</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Asqueta Glass by Lopo & Associates. <a href="/">Back to Home</a></p>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 50); });
+    </script>
+</body>
+</html>
