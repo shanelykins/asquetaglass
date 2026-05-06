@@ -142,6 +142,24 @@
             box-shadow: var(--shadow-md);
         }
 
+        .header-social {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .header-social a {
+            color: var(--dark-gray);
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-social a:hover {
+            color: var(--blue);
+        }
+
         .mobile-cta {
             display: none;
             background: var(--blue);
@@ -1003,6 +1021,29 @@
             line-height: 1.7;
         }
 
+        .footer-social {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.25rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.7);
+            transition: all 0.2s;
+        }
+
+        .footer-social a:hover {
+            background: var(--accent);
+            color: white;
+        }
+
         .footer-col h4 {
             font-size: 0.85rem;
             font-weight: 700;
@@ -1136,6 +1177,31 @@
             display: none;
         }
 
+        .mobile-nav-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .mobile-nav-social a {
+            width: 44px;
+            height: 44px;
+            background: var(--white);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--charcoal);
+            transition: all 0.2s;
+        }
+
+        .mobile-nav-social a:hover {
+            background: var(--blue);
+            color: white;
+        }
+
         .mobile-close {
             width: 48px;
             height: 48px;
@@ -1211,7 +1277,7 @@
                 height: 50px;
             }
 
-            nav, .header-cta {
+            nav, .header-cta, .header-social {
                 display: none;
             }
 
@@ -1617,6 +1683,10 @@
                 font-size: 0.9rem;
             }
 
+            .footer-social {
+                justify-content: center;
+            }
+
             .footer-col {
                 text-align: center;
             }
@@ -1699,6 +1769,14 @@
                 <a href="#team">Our Team</a>
                 <a href="#contact">Contact</a>
             </nav>
+            <div class="header-social">
+                <a href="https://www.instagram.com/asquetaglass/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://www.facebook.com/people/Asqueta-Glass/61580762390418/" target="_blank" rel="noopener" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+            </div>
             <a href="#contact" class="header-cta">Get Free Quote</a>
             <a href="tel:208-466-2476" class="mobile-cta">Call Now</a>
             <div class="mobile-toggle" onclick="toggleMobile()">
@@ -1729,6 +1807,14 @@
         <div class="mobile-nav-contact">
             <a href="tel:208-466-2476">Call: 208-466-2476</a>
             <a href="#">Mon-Thu: 8am-5pm | Fri: 8am-4pm</a>
+            <div class="mobile-nav-social">
+                <a href="https://www.instagram.com/asquetaglass/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://www.facebook.com/people/Asqueta-Glass/61580762390418/" target="_blank" rel="noopener" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -2129,6 +2215,14 @@
                 <div class="footer-brand">
                     <img src="https://images.squarespace-cdn.com/content/v1/699f21be4d4eaf4e114bab5b/03d2b8ee-e8cf-40c2-9823-5cbb5d378e97/ChatGPT+Image+Feb+26%2C+2026%2C+10_16_29+AM.png" alt="Asqueta Glass">
                     <p>Family-owned glass company serving the Treasure Valley since 1965. Quality craftsmanship, honest service.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/asquetaglass/" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="https://www.facebook.com/people/Asqueta-Glass/61580762390418/" target="_blank" rel="noopener" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-col">
                     <h4>Services</h4>
