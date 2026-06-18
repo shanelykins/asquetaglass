@@ -661,12 +661,15 @@
         }
 
         .offers-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 2rem;
         }
 
         .offer-card {
+            flex: 0 1 360px;
+            max-width: 400px;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: var(--shadow-lg);
@@ -1544,8 +1547,15 @@
 
             /* Offers */
             .offers-grid {
-                grid-template-columns: 1fr;
+                flex-direction: column;
+                align-items: center;
                 gap: 1.25rem;
+            }
+
+            .offer-card {
+                flex: 0 1 auto;
+                width: 100%;
+                max-width: 100%;
             }
 
             .offer-card img {
